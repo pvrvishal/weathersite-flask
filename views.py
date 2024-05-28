@@ -25,7 +25,6 @@ def home():
         re = requests.get(url)
 
         row_data = re.json()
-        print(row_data)
 
         if row_data == {'cod': '404', 'message': 'city not found'}:
             return redirect('/')
