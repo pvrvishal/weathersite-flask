@@ -12,7 +12,7 @@ def home():
     if request.method == 'POST':
     
         city = request.form.get('city')
-        # print(city)
+        
         if city == "":
             return redirect("/")
 
