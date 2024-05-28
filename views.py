@@ -12,7 +12,7 @@ def home():
     if request.method == 'POST':
     
         city = request.form.get('city')
-        # print(city)
+        
         if city == "":
             return redirect("/")
 
@@ -25,7 +25,6 @@ def home():
         re = requests.get(url)
 
         row_data = re.json()
-        print(row_data)
 
         if row_data == {'cod': '404', 'message': 'city not found'}:
             return redirect('/')
